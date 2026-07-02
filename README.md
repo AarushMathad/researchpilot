@@ -1,8 +1,8 @@
 # ResearchPilot
 
-An autonomous multi-agent academic research assistant. Give it a topic — it plans search queries, retrieves and ranks papers from Semantic Scholar and arXiv, summarises each one, identifies gaps in the literature, and writes a full literature review.
+An autonomous multi-agent academic research assistant. Given a topic, it plans search queries, retrieves and ranks papers from Semantic Scholar and arXiv, summarizes each one, identifies gaps in the literature, and writes a full literature review.
 
-> **Status: Active development.** Core pipeline is functional. Formal testing and benchmarking in progress.
+> **Status: Active development.** Core pipeline is functional; formal testing and benchmarking in progress.
 This project was built with help from Claude (frontend, debugging, and documentation).
 ---
 
@@ -12,9 +12,7 @@ This project was built with help from Claude (frontend, debugging, and documenta
 
 ## What it does
 
-One query in. One structured research package out.
-
-- **Query planning** — decomposes your topic into subtopics and targeted search queries using single-call chain-of-thought self-refinement
+- **Query planning** — decomposes your topic into subtopics and targeted search queries using a single-call chain-of-thought self-refinement
 - **Dual-source search** — queries Semantic Scholar and arXiv concurrently, deduplicates, and enriches arXiv papers with citation data
 - **Semantic ranking** — scores papers across four configurable dimensions (semantic relevance, citations, recency, venue quality) using local embeddings
 - **Batched summarisation** — structured per-paper analysis across contribution, methodology, findings, and limitations
@@ -51,7 +49,7 @@ One query in. One structured research package out.
 ## Roadmap
 
 - [ ] Formal test suite and benchmarking harness
-- [ ] PDF extraction for richer summarisation and gap analysis
+- [ ] PDF extraction for richer summarization and gap analysis
 - [ ] Contradiction/consensus detection across papers
 - [ ] Conversational refinement (re-run on cached results)
 - [ ] Citation graph visualisation
