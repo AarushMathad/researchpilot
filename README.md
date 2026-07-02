@@ -3,7 +3,7 @@
 An autonomous multi-agent academic research assistant. Give it a topic — it plans search queries, retrieves and ranks papers from Semantic Scholar and arXiv, summarises each one, identifies gaps in the literature, and writes a full literature review.
 
 > **Status: Active development.** Core pipeline is functional. Formal testing and benchmarking in progress.
-
+This project was built with help from Claude (frontend, debugging, and documentation).
 ---
 
 ![Home screen](screenshots/home.png)
