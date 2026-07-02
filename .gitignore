@@ -1,0 +1,8 @@
+.env
+research_pilot.db
+__pycache__/
+*.pyc
+.venv/
+*.db
+node_modules/
+dist/

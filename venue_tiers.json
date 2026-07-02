@@ -1,0 +1,19 @@
+{
+  "_comment": "Add venues for your domain. Scores: tier_1=1.0, tier_2=0.8, proceedings=0.6, unknown=0.3",
+  "tier_1": [
+    "Nature", "Science", "Cell", "NEJM", "Lancet",
+    "NeurIPS", "ICML", "ICLR", "CVPR", "ECCV", "ICCV",
+    "ACL", "EMNLP", "NAACL",
+    "SIGMOD", "VLDB", "OSDI", "SOSP",
+    "IEEE TPAMI", "JMLR", "Communications of the ACM"
+  ],
+  "tier_2": [
+    "AAAI", "IJCAI", "KDD", "WWW", "WSDM", "SIGIR",
+    "COLING", "EACL", "CoNLL",
+    "AISTATS", "UAI", "COLT",
+    "ICRA", "IROS", "RSS",
+    "Nature Communications", "PLOS ONE", "Scientific Reports",
+    "IEEE Access", "Frontiers"
+  ],
+  "proceedings": []
+}

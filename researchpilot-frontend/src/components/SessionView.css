@@ -1,0 +1,138 @@
+.session-view {
+  flex: 1;
+  max-width: 880px;
+  margin: 0 auto;
+  padding: 48px 32px 80px;
+  width: 100%;
+}
+
+.session-header {
+  margin-bottom: 32px;
+}
+
+.session-eyebrow {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--purple-glow);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 8px;
+}
+
+.session-query {
+  font-size: 1.7rem;
+  color: var(--text);
+  line-height: 1.35;
+}
+
+.session-pipeline {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 20px 24px 12px;
+  margin-bottom: 24px;
+}
+
+.session-pipeline-status {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--text-faint);
+  text-align: center;
+  margin-top: 10px;
+}
+
+.session-pipeline-status--error {
+  color: var(--error);
+}
+
+.session-banner {
+  border-radius: var(--radius-md);
+  padding: 14px 18px;
+  margin-bottom: 20px;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.session-banner--warn {
+  background: rgba(240, 183, 94, 0.08);
+  border: 1px solid rgba(240, 183, 94, 0.25);
+  color: var(--warn);
+}
+
+.session-banner--error {
+  background: rgba(229, 115, 115, 0.08);
+  border: 1px solid rgba(229, 115, 115, 0.25);
+  color: var(--error);
+}
+
+.session-banner p + p {
+  margin-top: 6px;
+}
+
+.session-tabs {
+  display: flex;
+  gap: 4px;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 24px;
+}
+
+.session-tab {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 16px;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-faint);
+  border-bottom: 2px solid transparent;
+  transition: color 0.18s ease, border-color 0.18s ease;
+  margin-bottom: -1px;
+}
+
+.session-tab:hover {
+  color: var(--text-dim);
+}
+
+.session-tab--active {
+  color: var(--text);
+  border-bottom-color: var(--purple);
+}
+
+.session-tab-count {
+  font-family: var(--font-mono);
+  font-size: 10.5px;
+  color: var(--text-faint);
+  background: var(--surface-raised);
+  padding: 1px 6px;
+  border-radius: 999px;
+}
+
+.session-tab--active .session-tab-count {
+  color: var(--purple-glow);
+}
+
+.session-card-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.session-empty {
+  color: var(--text-faint);
+  font-size: 13.5px;
+  padding: 40px 20px;
+  text-align: center;
+  background: var(--surface);
+  border: 1px dashed var(--border);
+  border-radius: var(--radius-lg);
+  line-height: 1.6;
+}
+
+@media (max-width: 720px) {
+  .session-view {
+    padding: 32px 20px 60px;
+  }
+  .session-query {
+    font-size: 1.4rem;
+  }
+}

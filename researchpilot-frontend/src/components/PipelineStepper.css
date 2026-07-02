@@ -1,0 +1,131 @@
+.stepper {
+  display: flex;
+  align-items: flex-start;
+  width: 100%;
+  padding: 8px 4px;
+}
+
+.stepper-item {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  min-width: 0;
+}
+
+.stepper-item:last-child {
+  flex: 0 0 auto;
+}
+
+.stepper-node-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.stepper-node {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1.5px solid var(--border-bright);
+  background: var(--surface);
+  color: var(--text-faint);
+  transition: all 0.35s ease;
+  flex-shrink: 0;
+}
+
+.stepper-node--pending {
+  border-color: var(--border-bright);
+  background: var(--surface);
+  color: var(--text-faint);
+}
+
+.stepper-node--active {
+  border-color: var(--purple);
+  background: var(--purple-soft);
+  color: var(--purple-glow);
+  animation: pulse-glow 1.8s ease-in-out infinite;
+}
+
+.stepper-node--done {
+  border-color: var(--purple);
+  background: var(--purple);
+  color: var(--bg);
+}
+
+.stepper-index {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.stepper-pulse-dot {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: none;
+  border: 1.5px solid transparent;
+  border-top-color: var(--purple-glow);
+  border-right-color: var(--purple-glow);
+  animation: spin 1s linear infinite;
+}
+
+.stepper-label {
+  font-family: var(--font-display);
+  font-size: 11px;
+  font-weight: 500;
+  white-space: nowrap;
+  letter-spacing: 0.01em;
+  transition: color 0.35s ease;
+}
+
+.stepper-label--pending {
+  color: var(--text-faint);
+}
+
+.stepper-label--active {
+  color: var(--purple-glow);
+}
+
+.stepper-label--done {
+  color: var(--text-dim);
+}
+
+.stepper-line-track {
+  flex: 1;
+  height: 1.5px;
+  background: var(--border);
+  margin: 0 6px;
+  margin-bottom: 24px;
+  position: relative;
+  overflow: hidden;
+  min-width: 16px;
+}
+
+.stepper-line-fill {
+  position: absolute;
+  inset: 0;
+  width: 0%;
+  background: linear-gradient(90deg, var(--purple-dim), var(--purple));
+  transition: width 0.6s ease;
+}
+
+.stepper-line-fill--full {
+  width: 100%;
+}
+
+@media (max-width: 640px) {
+  .stepper-label {
+    display: none;
+  }
+  .stepper-node-wrap {
+    gap: 0;
+  }
+  .stepper-line-track {
+    margin-bottom: 0;
+  }
+}
